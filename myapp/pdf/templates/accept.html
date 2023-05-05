@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <form>
+            <div class="container">
+              <div class="row m-5">
+                <div class="col-md-12">
+                  <h1>CV Generator</h1>
+                    <hr>
+                 </div>
+               </div>
+              <div class="row m-5">
+                 <div class="col-md-12">
+                    <h4>Please fill out your details</h4>
+            </div>
+            </div>
+            <div class="row m-5">
+                <div class="col-md-7">
+                    <form method="POST">
+                      {% csrf_token %}
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" required>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="">LastName</label>
+                            <input type="text" class="form-control" id="name" name="lname" placeholder="Enter your last  Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Gender</label>
+                            <input type="text" class="form-control" id="name" name="Gender" placeholder="Male or">
+                        </div> -->
+                        <!-- <div class="form-group">
+                            <label for="">DOB</label>
+                            <input type="text" class="form-control" id="name" name="lname" placeholder="Enter your DOB">
+                        </div> -->
+                        <div class="form-group">
+                          <label for="">Phone</label>
+                          <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"class="form-control"  name="phone" placeholder="Enter your phone number" required>
+                        </div>          
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input placeholder="demo@gmail.com" type="email"  name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">School</label>
+                            <input placeholder="MIT" type="text" id="school" name="school" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Degree</label>
+                            <input placeholder="B tech " type="text" id="degree" name="degree" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">University</label>
+                            <input placeholder="Kec " type="text" id="university" name="university" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Skills</label>
+                            <textarea placeholder="C C++ Python..." type="text" id="skill" name="skill" class="form-control"></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="">About You</label>
+                            <textarea placeholder="Write something About You!" type="text" id="about_you" name="about_you" class="form-control"></textarea>
+                        </div>         
+                        <div class="form-group">
+                            <label for="">Previous Work</label>
+                            <textarea placeholder="Software developer " type="text" id="previous_work" name="previous_work" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Address</label>
+                            <textarea placeholder="your address " type="text" id="previous_work" name="address" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">City</label>
+                            <textarea placeholder="your city " type="text" id="previous_work" name="city" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Pincode</label>
+                            <textarea placeholder="your pin " type="text" id="previous_work" name="pin" class="form-control"></textarea>
+                        </div> -->
+                        <button type="submit" formmethod="post" class="btn-btn-primary">Submit</submit>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
